@@ -54,7 +54,7 @@ export class DeviceService {
       throw new HttpException({
         'status': 404,
         'error': true,
-        'message': 'Device code not found'
+        'message': 'Device not found'
       }, 404)
     }
   }

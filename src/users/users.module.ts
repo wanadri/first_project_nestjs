@@ -4,12 +4,17 @@ import { UserController } from './users.controller';
 import { UserService } from './users.service';
 import { UserSchema } from '../users/users.schema';
 
+const UserMongoose = MongooseModule.forFeature([{
+  name: 'User',
+  schema: UserSchema
+}])
 @Module({
-  imports: [MongooseModule.forFeature([{
-    name: 'Users',
-    schema: UserSchema
-  }])],
+  imports: [UserMongoose],
   controllers: [UserController],
-  providers: [UserService]
+  providers: [UserService],
+  exports: [
+    UserMongoose,
+    UserService
+  ]
 })
-export class UsersModule {}
+export class UserModule {}

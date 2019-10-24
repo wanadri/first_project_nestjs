@@ -1,9 +1,22 @@
 import { Schema } from 'mongoose'
 
 export const UserSchema = new Schema({
-  email: String,
-  password: String,
-  name: String,
-  active: Boolean,
+  email: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  active: {
+    type: Boolean,
+    default: true
+  },
   token: Array
 })

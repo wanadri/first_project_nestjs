@@ -83,6 +83,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - npm install --save @nestjs/mongoose mongoose
 - npm i uuid
 - npm install class-validator --save
+- npm i bcrypt
+- npm i @types/bcrypt -D
 
 ### nest g --help 
 Prompt list of shortcut schematics for each models
