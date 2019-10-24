@@ -73,3 +73,32 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+
+## NestJS Training
+### Package need to install
+- npm i dotenv
+- npm i --save-dev @type/jsonwebtoken
+- npm i jsonwebtoken
+- npm install --save @nestjs/mongoose mongoose
+- npm i uuid
+
+### nest g --help 
+Prompt list of shortcut schematics for each models
+
+### Module
+Contain import, export, controller and providers
+```
+import - to import class in module
+```
+```
+export - to export class to other module
+```
+```
+provider - to use/inject other class in controller
+```
+```
+controller - to define controller in module.
+```
+
+
