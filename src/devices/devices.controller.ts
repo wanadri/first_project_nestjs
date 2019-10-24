@@ -22,25 +22,25 @@ export class DeviceController {
   @Post()
   async create(@Body() device: DeviceDto, @Res() res) {
     const successDevice: IDevice = await this.device.create(device);
-    return success(res, successDevice, `Successfully created with device code = ${successDevice.device_code}`);
+    return success(res, successDevice, `Successful created with device code = ${successDevice.device_code}`);
   }
 
   @Delete(':code')
   async delete(@Param('code') code: string, @Res() res) {
     await this.device.delete(code)
-    return success(res, null, `Successfully delete device code = ${code}`)
+    return success(res, null, `Successful delete device code = ${code}`)
   }
 
   @Patch()
   async update(@Body() device: DeviceDto, @Res() res) {
     await this.device.update(device);
-    return success(res, null, `Successfully update device code = ${device.device_code}`)
+    return success(res, null, `Successful update device code = ${device.device_code}`)
   }
 
   @Patch('/credential/:code')
   async generateCredential(@Param('code') code: string, @Res() res) {
     await this.device.generateCredential(code)
     const deviceCredential = await this.device.getByCode(code)
-    return success(res, deviceCredential, `Successfull generate credential for device code = ${code}`)
+    return success(res, deviceCredential, `Successful generate credential for device code = ${code}`)
   }
 }
